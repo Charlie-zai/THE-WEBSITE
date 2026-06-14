@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>html有趣捏~</title>
+</head>
+<style>
+    @keyframes drift {
+        0%   { transform: translate(0, 0); opacity: 0.3; }
+        50%  { transform: translate(30px, -30px); opacity: 0.6; }
+        100% { transform: translate(0, 0); opacity: 0.3; }
+    }
+    .dot {
+        position: fixed;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        animation: drift 12s ease-in-out infinite;
+        z-index: -1;
+    }
+
+    h1{
+        color:gray;
+        text-shadow:0 0 40px rgb(232, 232, 107);
+        text-align:center;
+        position: relative;
+        z-index: 1;
+    }
+    button {
+        font-size: 20px;
+        padding: 10px 20px;
+        background: rgb(117, 184, 239);
+        border-radius: 10px;
+        border: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 0 0 transparent;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+    }
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 12px 4px rgba(66, 153, 225, 0.6);
+    }
+    button:active {
+        transform: scale(0.95);
+    }
+    .center {
+        text-align: center;
+        margin-top: 30px;
+    }
+    body {
+        background: linear-gradient(to bottom right, rgb(255, 198, 144), rgb(255, 220, 180));
+        min-height: 100vh;
+        margin: 0;
+        padding-top: 50px;
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+</style>
+<body>
+    <div class="dot" style="width:60px; height:60px; top:10%; left:20%; animation-delay:0s;"></div>
+    <div class="dot" style="width:45px; height:45px; top:25%; left:80%; animation-delay:2s;"></div>
+    <div class="dot" style="width:70px; height:70px; top:65%; left:15%; animation-delay:4s;"></div>
+    <div class="dot" style="width:50px; height:50px; top:85%; left:65%; animation-delay:6s;"></div>
+    <div class="dot" style="width:35px; height:35px; top:45%; left:40%; animation-delay:8s;"></div>
+<h1>这是一个标题——看来我的代码起作用辣~</h1>
+    <div class="center">
+        <button onclick="Hake()">点我有惊喜！</button>
+    </div>
+<script>
+function Hake(){
+    var hibody=5;
+    for(var i=1;i<=hibody;i++){
+        alert ("你好啊bro！关不掉吧，这是第"+i+"次");
+    }
+}
+</script>
+</body>
+</html>
